@@ -6,6 +6,13 @@ spring:
     username: root
     url: jdbc:mysql://192.168.200.3:3306/mall_ums?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
+# nacos 注册地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.200.3:8848
+  application:
+    name: mall-member
 mybatis-plus:
   mapper-locations: classpath:mapper/**/*.xml
   global-config:
